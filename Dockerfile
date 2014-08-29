@@ -10,7 +10,6 @@ RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf &&\
         echo "\nerror_log /dev/stdout info;" >> /etc/nginx/nginx.conf &&\
         chown -R www-data:www-data /var/lib/nginx
 
-VOLUME ["/data", "/etc/nginx/sites-enabled", "/etc/nginx/conf.d", "/var/log/nginx"]
 WORKDIR /etc/nginx
 EXPOSE 80 443
 # We don't define USER, because nginx drops privileges itself
